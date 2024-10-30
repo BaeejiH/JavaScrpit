@@ -7,18 +7,26 @@
 </head>
 <body>
     <div class="alert-box" id="alert">
-        <p id="XX">알림창임</p>
-        <button onclick="openAlram('none')">닫기</button>
+        <p class="title" id="XX">알림창임</p>
+        <button onclick="openAlram('none')" id="close">닫기</button>
     </div>
     <button onclick="openAlram('block','X1')" id="X1">버튼1</button>
     <button onclick="openAlram('block','X2')" id="X2">버튼2</button>
     <!-- 버튼을 누르면 openAlram()함수가 호출되면서 , 두개의 인자 (param,id)를 전달받음   -->
    
     <script>
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display = 'none';
+            // close에 있는 id 값을 click하면  함수 아래 코드를 실행해줌
+            // addEventListener()--> 안에 파라미터 두개 입력
+            // 함수 파라미터 자리에 function을 쓰면 콜백함수라고 부름, 순차적으로 실행하고 싶을 때.
+        })
+
         function openAlram(param,id){ // function의 용도는 코드의 간소화
             document.getElementById('alert').style.display = param; // 함수 하나로 두가지 기능 가능
             if(id === 'X1'){// x1 문자열 '' 붙여야함.
-                document.getElementById('XX').innerHTML = '아이디를 입력해주세요'
+                // document.getElementById('XX').innerHTML = '아이디를 입력해주세요'
+                document.getElementsByClassName('title')[0].innerHTML = '아이디를 입력해주세요'
             }else if(id === 'X2') { 
                 document.getElementById('XX').innerHTML = '비밀번호를 입력해주세요'
             }
