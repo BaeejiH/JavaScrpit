@@ -7,11 +7,17 @@
 </head>
 <body>
     <div class="alert-box" id="alert">알림창임
-    <button  onclick=" document.getElementById('alert').style.display = 'none';">닫기</button></div>
-    <button onclick=" document.getElementById('alert').style.display = 'block';">버튼</button>
-
+    <button onclick="closeAlram()">닫기</button></div>
+    <button onclick="openAlram()">버튼</button>
+     
     <script>
-       
-    </script>
+        function openAlram(){ // function의 용도는 코드의 간소화
+            document.getElementById('alert').style.display = 'block';
+        }
+        function closeAlram() {
+            document.getElementById('alert').style.display = 'none';
+    
+        }    
+</script>
 </body>
 </html>
