@@ -25,15 +25,74 @@
         <li class="list-group-item">And a fifth one</li>
       </ul>
 
+    
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".modal">
+        로그인
+    </button>
+
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- <p class="hello">안녕</p>
+      <p class="hello">안녕</p>
+      <p class="hello">안녕</p>
+      <button id="test-btn">버튼</button> -->
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script> 
       <script>    
+
+      
+        // jquery는 모든 요소를 찾아서 한번에 변경 가능.
+        // $('#test-btn').on('click',function(){
+        //     $('.hello').html('망고');  
+        //     $('.hello').slideUp('망고');
+        //     $('.hello').slideDown('망고');
+        //     $('.hello').slideUp('망고');
+        //     $('.hello').slideDown('망고');
+        //     $('.hello').fadeOut();
+        //     $('.hello').fadeIn();
+
+        // })
+
+
+
         //querySelectorAll은 주어진 선택자에 해당하는 모든 요소를 list형태로 반환함. 특정요소를 가져오고 싶다면 인덱스([0])를 써야함.
         document.querySelector('.navbar-toggler') //quertSelector은 첫 번째 요소 하나만 반환.
         .addEventListener('click',function(){
             document.querySelector('.list-group').classList.toggle('show');
         })
+
       </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+    
   </body>
 </html>
