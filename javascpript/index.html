@@ -6,18 +6,25 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="alert-box" id="alert">알림창임
-    <button onclick="closeAlram()">닫기</button></div>
-    <button onclick="openAlram()">버튼</button>
-     
+    <div class="alert-box" id="alert">
+        <p id="XX">알림창임</p>
+        <button onclick="openAlram('none')">닫기</button>
+    </div>
+    <button onclick="openAlram('block','X1')" id="X1">버튼1</button>
+    <button onclick="openAlram('block','X2')" id="X2">버튼2</button>
+    <!-- 버튼을 누르면 openAlram()함수가 호출되면서 , 두개의 인자 (param,id)를 전달받음   -->
+   
     <script>
-        function openAlram(){ // function의 용도는 코드의 간소화
-            document.getElementById('alert').style.display = 'block';
+        function openAlram(param,id){ // function의 용도는 코드의 간소화
+            document.getElementById('alert').style.display = param; // 함수 하나로 두가지 기능 가능
+            if(id === 'X1'){// x1 문자열 '' 붙여야함.
+                document.getElementById('XX').innerHTML = '아이디를 입력해주세요'
+            }else if(id === 'X2') { 
+                document.getElementById('XX').innerHTML = '비밀번호를 입력해주세요'
+            }
         }
-        function closeAlram() {
-            document.getElementById('alert').style.display = 'none';
+
     
-        }    
-</script>
+    </script>
 </body>
 </html>
