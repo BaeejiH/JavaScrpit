@@ -26,27 +26,25 @@
       </ul>
 
     
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".modal">
+    <button type="button" class="btn btn-primary" id="login">
         로그인
     </button>
 
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
+    <div class="black-bg show-modal">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <button class="btn btn-danger" id="close">닫기</button>
         </div>
     </div>
+
+    <!-- 
+    one -way UI애니메이션 만드는법
+    1. 시작 스타일
+    2. 최종 스타일(class로)
+    3. 원할때 최종스타일로 변하라고 코드짬
+    4. transition 
+    -->
+
 
       <!-- <p class="hello">안녕</p>
       <p class="hello">안녕</p>
@@ -59,9 +57,18 @@
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer"></script> 
-      <script>    
 
-      
+
+      <script>    
+      // 로그인 버튼을 누르면 show-modal클래스를 붙여라
+      $('#login').on('click',function(){
+        $('.black-bg').addClass('show-modal');
+      })
+
+      $('#close').on('click',function(){
+        $('.black-bg').removeClass('show-modal');
+      })
+
         // jquery는 모든 요소를 찾아서 한번에 변경 가능.
         // $('#test-btn').on('click',function(){
         //     $('.hello').html('망고');  
@@ -73,8 +80,6 @@
         //     $('.hello').fadeIn();
 
         // })
-
-
 
         //querySelectorAll은 주어진 선택자에 해당하는 모든 요소를 list형태로 반환함. 특정요소를 가져오고 싶다면 인덱스([0])를 써야함.
         document.querySelector('.navbar-toggler') //quertSelector은 첫 번째 요소 하나만 반환.
