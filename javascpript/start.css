@@ -33,3 +33,7 @@
     width: 100%;
     text-align: center;
 }
+.main-bg{
+    padding: 100px 20px;
+    background: lightseagreen;
+}
