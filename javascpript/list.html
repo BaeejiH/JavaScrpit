@@ -14,7 +14,7 @@
           <img src="https://via.placeholder.com/600">
           <div class="card-body">
             <h5 class="title">Card title</h5>
-            <p>가격 : 70000</p>
+            <p><span class="price">700000</span></p>
             <button class="btn btn-danger">주문하기</button>
           </div>
         </div>
@@ -22,7 +22,7 @@
           <img src="https://via.placeholder.com/600">
           <div class="card-body">
             <h5 class="title1">Card title</h5>
-            <p>가격 : 70000</p>
+            <p><span class="price1">700000</span></p>
             <button class="btn btn-danger">주문하기</button>
           </div>
         </div>
@@ -30,7 +30,7 @@
           <img src="https://via.placeholder.com/600">
           <div class="card-body">
             <h5 class="title2">Card title</h5>
-            <p>가격 : 70000</p>
+            <p><span class="price2">700000</span></p>
             <button class="btn btn-danger">주문하기</button>
           </div>
         </div>
@@ -46,7 +46,19 @@
         document.querySelector('.title').innerHTML = products[0].title
         document.querySelector('.title1').innerHTML = products[1].title
         document.querySelector('.title2').innerHTML = products[2].title
-      </script>
+
+        document.querySelector('.price').innerHTML = '가격:' + products[0].price
+        document.querySelector('.price1').innerHTML = '가격:' + products[1].price
+        document.querySelector('.price2').innerHTML = '가격:' + products[2].price
+
+        // 문자 중간에 변수 집어 넣기
+        // var a = '안녕';
+        // '문자' + a + '문자'
+
+        var b = '안녕하세요';
+        `문자${b}문자` // 백틱 기호로 쓰면 문자와 문자 사이에 변수를 넣을 수 있음
+        console.log(`문자${b}문자`)
+    </script>
 
 
 
