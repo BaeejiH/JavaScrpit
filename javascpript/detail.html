@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container mt-3">
+        <div class="card p-3">
+            <span class="car-title">상품명</span>
+            <span class="car-title2">가격 </span>
+        </div>
+    </div>
+
+<script>
+    // Array 와 Object 
+    // Array는 순서대로 저장(인덱싱 불가능)
+    // Object는 각각의 이름을 저장(순서 개념이 없음 데이터가 많아질수록 object가 유용)
+    // 상황에 맞게 자료형 가져다 쓰면됨
+
+    var car = ['소나타',50000,'white']
+    car[1] = 30000;
+    console.log(car)
+    console.log(car[1])
+
+    var car2 = {name:'소나타',price:50000}// key, value
+    document.querySelector('.car-title').innerHTML = car2.name;
+    document.querySelector('.car-title2').innerHTML = car2.price;
+    console.log(car2)
+    console.log(car2.name)
+
+    // car.sort(); // 자료 정렬 함수
+   
+    console.log( car.slice(1,3)); // 자료 자르기
+</script>
+    
+</body>
+</html>
